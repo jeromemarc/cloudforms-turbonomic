@@ -40,5 +40,6 @@ log(:debug, "Response: #{response.body}")
 
 doc = Nokogiri::XML(response.body)
 root = doc.root
-group = root.xpath("/TopologyElements/TopologyElement/@displayName")
-$evm.log("info", "Virtual Machines --> #{group}")
+root.xpath("/TopologyElements/TopologyElement/@displayName").each do |name|
+  $evm.log("info", "Virtual Machine --> #{name}")
+end
