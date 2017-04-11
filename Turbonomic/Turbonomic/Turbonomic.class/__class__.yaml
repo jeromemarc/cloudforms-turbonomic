@@ -1,0 +1,113 @@
+---
+object_type: class
+version: 1.0
+object:
+  attributes:
+    description: Turbonomic
+    display_name: 
+    name: Turbonomic
+    type: 
+    inherits: 
+    visibility: 
+    owner: 
+  schema:
+  - field:
+      aetype: attribute
+      name: turbonomic_server
+      display_name: 
+      datatype: string
+      priority: 1
+      owner: 
+      default_value: 10.9.62.101
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: turbonomic_user
+      display_name: 
+      datatype: string
+      priority: 2
+      owner: 
+      default_value: administrator
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: turbonomic_password
+      display_name: 
+      datatype: password
+      priority: 3
+      owner: 
+      default_value: v2:{a59Jh352sWSljA9UlhU04A==}
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: groupname
+      display_name: 
+      datatype: string
+      priority: 4
+      owner: 
+      default_value: GROUP-USER-Application Group
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: method
+      name: execute
+      display_name: 
+      datatype: string
+      priority: 5
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
