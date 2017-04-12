@@ -1,0 +1,48 @@
+---
+- MiqReport:
+    title: Turbonomic Migration Candidates
+    rpt_group: Custom
+    rpt_type: Custom
+    priority: 
+    db: ManageIQ::Providers::InfraManager::Vm
+    cols:
+    - name
+    include: {}
+    col_order:
+    - name
+    headers:
+    - Migration Candidate
+    conditions: !ruby/object:MiqExpression
+      exp:
+        CONTAINS:
+          tag: ManageIQ::Providers::InfraManager::Vm.user.managed-turbonomic
+          value: candidate
+      context_type: 
+    order: Ascending
+    sortby:
+    - name
+    group: 
+    graph: 
+    dims: 
+    filename: 
+    file_mtime: 
+    categories: []
+    timeline: 
+    template_type: report
+    where_clause: 
+    db_options: {}
+    generate_cols: 
+    generate_rows: 
+    col_formats:
+    - 
+    tz: 
+    time_profile_id: 
+    display_filter: 
+    col_options: {}
+    rpt_options:
+      :pdf:
+        :page_size: US-Letter
+      :queue_timeout: 
+    miq_group_id: 20000000000002
+    user_id: 20000000000001
+    menu_name: Turbonomic Migration Candidates

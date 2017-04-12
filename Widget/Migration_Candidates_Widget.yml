@@ -1,0 +1,89 @@
+---
+- MiqWidget:
+    guid: 24310638-1f14-11e7-9047-001a4a16017d
+    description: Migration Candidates based on Turbonomic
+    title: Migration Candidates
+    content_type: report
+    options:
+      :row_count: 10
+      :col_order:
+      - name
+    visibility:
+      :roles:
+      - _ALL_
+    user_id: 
+    resource_id: 20000000000418
+    resource_type: MiqReport
+    enabled: true
+    read_only: false
+    MiqReportContent:
+    - MiqReport:
+        title: Turbonomic Migration Candidates
+        rpt_group: Custom
+        rpt_type: Custom
+        priority: 
+        db: ManageIQ::Providers::InfraManager::Vm
+        cols:
+        - name
+        include: {}
+        col_order:
+        - name
+        headers:
+        - Migration Candidate
+        conditions: !ruby/object:MiqExpression
+          exp:
+            CONTAINS:
+              tag: ManageIQ::Providers::InfraManager::Vm.user.managed-turbonomic
+              value: candidate
+          context_type: 
+        order: Ascending
+        sortby:
+        - name
+        group: 
+        graph: 
+        dims: 
+        filename: 
+        file_mtime: 
+        categories: []
+        timeline: 
+        template_type: report
+        where_clause: 
+        db_options: {}
+        generate_cols: 
+        generate_rows: 
+        col_formats:
+        - 
+        tz: 
+        time_profile_id: 
+        display_filter: 
+        col_options: {}
+        rpt_options:
+          :pdf:
+            :page_size: US-Letter
+          :queue_timeout: 
+        miq_group_id: 20000000000002
+        user_id: 20000000000001
+        menu_name: Turbonomic Migration Candidates
+    MiqSchedule:
+      name: Migration Candidates
+      description: Migration Candidates based on Turbonomic
+      sched_action:
+        :method: generate_widget
+      filter: !ruby/object:MiqExpression
+        exp:
+          "=":
+            field: MiqWidget-id
+            value: 20000000000100
+        context_type: 
+      towhat: MiqWidget
+      run_at:
+        :start_time: 2017-04-13 00:00:00.000000000 Z
+        :tz: UTC
+        :interval:
+          :unit: hourly
+          :value: 1
+      enabled: true
+      userid: system
+      prod_default: system
+      adhoc: 
+      file_depot_id: 
