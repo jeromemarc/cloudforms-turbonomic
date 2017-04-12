@@ -111,3 +111,43 @@ object:
       on_error: 
       max_retries: 
       max_time: 
+  - field:
+      aetype: attribute
+      name: tag_category
+      display_name: 
+      datatype: string
+      priority: 6
+      owner: 
+      default_value: Turbonomic
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: tag_name
+      display_name: 
+      datatype: string
+      priority: 7
+      owner: 
+      default_value: Candidate
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
